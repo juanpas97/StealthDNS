@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<PublishSingleFile>true</PublishSingleFile>
+	<PublishTrimmed>true</PublishTrimmed>
+	<PackageIcon>png-clipart-adobe-acrobat-computer-icons-pdf-scalable-graphics-acrobat-reader-icon-angle-text-thumbnail-removebg-preview.png</PackageIcon>
+	<ApplicationIcon>Resources\png-clipart-adobe-acrobat-computer-icons-pdf-scalable-graphics-acrobat-reader-icon-angle-text-thumbn.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\png-clipart-adobe-acrobat-computer-icons-pdf-scalable-graphics-acrobat-reader-icon-angle-text-thumbn.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DnsClient" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
